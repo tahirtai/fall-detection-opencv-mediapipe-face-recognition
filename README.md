@@ -1,56 +1,86 @@
-## Quick Start
+Fall Detection using OpenCV and MediaPipe
+Quick Start
 
-1) Clone:
-   git clone https://github.com/tahirtai/fall-detection-opencv-mediapipe-face-recognition.git
-   cd fall-detection-opencv-mediapipe-face-recognition
+1. Clone the repository
 
-2) Create & activate venv (Windows):
-   python -m venv venv
-   .\venv\Scripts\activate
-
-3) Install deps:
-   pip install --upgrade pip
-   pip install -r requirements.txt
-
-4) Run:
-   python main.py
+git clone https://github.com/tahirtai/fall-detection-opencv-mediapipe-face-recognition.git
+cd fall-detection-opencv-mediapipe-face-recognition
 
 
-# Fall Detection using OpenCV and MediaPipe
-This project is aimed at developing a fall detection system using OpenCV and MediaPipe libraries in Python. The system detects falls by monitoring the movements of individuals captured in live video feeds and triggers an alert when a fall is detected. The implementation involves capturing the video using OpenCV, marking landmarks using MediaPipe, and analyzing the movements to identify falls.
+2. Create & activate virtual environment (Windows)
 
-## Requirements
-To run this project, you need to have the following libraries installed:
+python -m venv venv
+.\venv\Scripts\activate
 
-OpenCV (import cv2)
-MediaPipe (import mediapipe as mp)
-Python (from time import time)
-You can install the required libraries using pip:
 
-Copy code
-` pip install opencv-python
-pip install mediapipe ` 
+3. Install dependencies
 
-### Working of the Prototype
-[Working Demo with Fall Detection and Face Recognition](https://drive.google.com/file/d/1HhNCq11J1ZNmuDoxo6KYVFS1S7IJZid7/view?usp=sharing)
+pip install --upgrade pip
+pip install -r requirements.txt
 
-## How it works
 
-### Video Capture: 
-The system captures live video using OpenCV, allowing it to monitor individuals in real-time.
+4. Run the application
 
-### Landmark Detection: 
-MediaPipe library is used to detect landmarks on the human body, such as shoulders, elbows, and hips. These landmarks help in tracking the movements of individuals in the video.
+python main.py
 
-### Fall Detection Algorithm: 
-The system periodically checks the previous coordinates of the shoulders of the person in the frame, typically every 4 seconds. If there is a significant drop in the height of the shoulders, it indicates a potential fall.
+Project Overview
 
-### Face Detection:
-Facial recognition using the facial_recognition library helps identify individuals in the video. This information is then used to retrieve contextual data from the integrated database about the person who has fallen.
+This project is a real-time fall detection system developed using OpenCV and MediaPipe in Python. It monitors individuals through a live video feed, detects potential falls based on body movement patterns, and triggers alerts with contextual information. The system can also perform face recognition to identify individuals and fetch their medical and emergency details.
 
-### Alert Triggering:
-When a fall is detected, the system prints "Fall Detected" and retrieves relevant information about the individual from the database. This information includes medical history, emergency contact details, and specific care instructions.
+Requirements
 
-### Integration with Healthcare Authorities and Guardians:
-The database contains comprehensive information about the individuals being monitored, securely storing their medical history and emergency contact details. Healthcare authorities and guardians receive immediate notifications via Telegram with detailed information about the incident, enabling them to initiate a timely response. Healthcare authorities coordinate assistance efforts based on the information provided, dispatching appropriate medical personnel or emergency responders to the location.
+You need the following installed to run this project:
 
+Python 3.x
+
+OpenCV (cv2)
+
+MediaPipe (mediapipe)
+
+face_recognition
+
+time (built-in Python module)
+
+Install manually if needed:
+
+pip install opencv-python
+pip install mediapipe
+pip install face_recognition
+
+How It Works
+1. Video Capture
+
+Live video feed is captured using OpenCV, enabling continuous real-time monitoring.
+
+2. Landmark Detection
+
+MediaPipe detects human body landmarks such as shoulders, elbows, and hips for movement tracking.
+
+3. Fall Detection Algorithm
+
+The system checks the previous coordinates of the shoulders every few seconds. A significant drop in shoulder height is interpreted as a potential fall.
+
+4. Face Recognition
+
+face_recognition is used to identify the individual in the frame and fetch their information from the database.
+
+5. Alert Triggering
+
+When a fall is detected:
+
+"Fall Detected" is printed on screen.
+
+The individual's medical history, emergency contact details, and care instructions are retrieved.
+
+6. Healthcare & Guardian Integration
+
+The database stores sensitive information securely and sends instant notifications to healthcare authorities and guardians via Telegram, allowing immediate response.
+
+Working Demo
+
+Watch Demo Video
+
+About
+
+Fall Detection using OpenCV, MediaPipe Pose Estimation, and Face Recognition
+Designed for healthcare emergency alerts and real-time monitoring.
