@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Editor/OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs / DBs / temp
+*.log
+*.sqlite*
+*.db
+
+# Model weights / large binaries (keep out of git)
+models/
+*.dat
+*.onnx
+*.h5
+*.pt
+
+# (Optional) If you store large videos, uncomment these:
+# *.mp4
+# *.avi
