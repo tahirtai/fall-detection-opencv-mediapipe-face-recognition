@@ -77,8 +77,7 @@ The individual's medical history, emergency contact details, and care instructio
 The database stores sensitive information securely and sends instant notifications to healthcare authorities and guardians via Telegram, allowing immediate response.
 
 Working Demo
-
-Watch Demo Video
+https://drive.google.com/file/d/1HhNCq11J1ZNmuDoxo6KYVFS1S7IJZid7/view
 
 About
 
