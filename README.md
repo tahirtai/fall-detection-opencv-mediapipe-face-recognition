@@ -1,85 +1,99 @@
-Fall Detection using OpenCV and MediaPipe
-Quick Start
+🚀 **Project Title & Tagline**
 
-1. Clone the repository
+**Project Title:** Face Recognition System
+**Tagline:** "Unlocking Identity through AI-Powered Facial Recognition"
 
-git clone https://github.com/tahirtai/fall-detection-opencv-mediapipe-face-recognition.git
-cd fall-detection-opencv-mediapipe-face-recognition
+📖 **Description**
+
+The Face Recognition System is a machine learning-based project that utilizes facial recognition algorithms to identify individuals through images or videos. This project aims to provide a robust and accurate solution for facial recognition, enabling users to verify identities, detect faces, and track movements. The system is designed to be modular, allowing for easy integration with various applications and systems.
+
+The Face Recognition System consists of three primary components: facial detection, face recognition, and database management. The facial detection module uses OpenCV and MediaPipe to detect faces in images or videos. The face recognition module utilizes the FaceNet algorithm to extract facial features and compare them to a database of known faces. The database management module is responsible for storing and retrieving facial data, ensuring efficient and secure storage.
+
+✨ **Features**
+
+1. 📹 **Facial Detection**: Detect faces in images or videos using OpenCV and MediaPipe.
+2. 🤝 **Face Recognition**: Recognize faces using the FaceNet algorithm and compare them to a database of known faces.
+3. 📊 **Database Management**: Store and retrieve facial data in a secure and efficient manner.
+4. 🔒 **Security**: Implement robust security measures to prevent unauthorized access and ensure data integrity.
+5. 📈 **Performance**: Optimize system performance for real-time facial recognition and detection.
+6. 📊 **Scalability**: Design the system for scalability, allowing for easy integration with large datasets.
+7. 👀 **Visualization**: Provide a user-friendly interface for visualizing facial recognition results.
+8. 📝 **Documentation**: Include detailed documentation for developers and users, ensuring seamless integration and troubleshooting.
+
+🧰 **Tech Stack**
+
+| **Frontend** | **Backend** | **Tools** |
+| --- | --- | --- |
+| Python | Python | OpenCV, MediaPipe, FaceNet |
+|  |  | NumPy, SciPy |
+|  |  | Loguru (logging library) |
+
+📁 **Project Structure**
+
+```
+face_recognition/
+├── facial_recognition.py
+├── main.py
+├── database.py
+├── config.py
+├── models/
+│   ├── face_recognition_model.h5
+│   └── ...
+├── datasets/
+│   ├── training_data/
+│   │   ├── images/
+│   │   ├── ...
+│   ├── testing_data/
+│   │   ├── images/
+│   │   ├── ...
+│   └── ...
+├── scripts/
+│   ├── detect_faces.py
+│   ├── recognize_faces.py
+│   └── ...
+├── tests/
+│   ├── test_facial_recognition.py
+│   └── ...
+├── README.md
+└── LICENSE
+```
+
+⚙️ **How to Run**
+
+**Setup**
+
+1. Install the required libraries by running `pip install -r requirements.txt`.
+2. Clone the repository and navigate to the project directory.
+
+**Environment**
+
+1. Set the `FACE_RECOGNITION_DATABASE` environment variable to the path of the database file.
+2. Set the `FACE_RECOGNITION_MODEL` environment variable to the path of the face recognition model file.
+
+**Build**
+
+1. Run `python main.py` to build the facial recognition system.
+
+**Deploy**
+
+1. Deploy the system to a suitable environment, such as a cloud platform or a local machine.
+
+🧪 **Testing Instructions**
+
+1. Run `python -m unittest tests/test_facial_recognition.py` to run the unit tests.
+2. Use the `detect_faces.py` and `recognize_faces.py` scripts to test the facial detection and recognition modules.
 
 
-2. Create & activate virtual environment (Windows)
+📦 **Working Demo **
 
-python -m venv venv
-.\venv\Scripts\activate
-
-
-3. Install dependencies
-
-pip install --upgrade pip
-pip install -r requirements.txt
-
-
-4. Run the application
-
-python main.py
-
-Project Overview
-
-This project is a real-time fall detection system developed using OpenCV and MediaPipe in Python. It monitors individuals through a live video feed, detects potential falls based on body movement patterns, and triggers alerts with contextual information. The system can also perform face recognition to identify individuals and fetch their medical and emergency details.
-
-Requirements
-
-You need the following installed to run this project:
-
-Python 3.x
-
-OpenCV (cv2)
-
-MediaPipe (mediapipe)
-
-face_recognition
-
-time (built-in Python module)
-
-Install manually if needed:
-
-pip install opencv-python
-pip install mediapipe
-pip install face_recognition
-
-How It Works
-1. Video Capture
-
-Live video feed is captured using OpenCV, enabling continuous real-time monitoring.
-
-2. Landmark Detection
-
-MediaPipe detects human body landmarks such as shoulders, elbows, and hips for movement tracking.
-
-3. Fall Detection Algorithm
-
-The system checks the previous coordinates of the shoulders every few seconds. A significant drop in shoulder height is interpreted as a potential fall.
-
-4. Face Recognition
-
-face_recognition is used to identify the individual in the frame and fetch their information from the database.
-
-5. Alert Triggering
-
-When a fall is detected:
-
-"Fall Detected" is printed on screen.
-
-The individual's medical history, emergency contact details, and care instructions are retrieved.
-
-6. Healthcare & Guardian Integration
-
-The database stores sensitive information securely and sends instant notifications to healthcare authorities and guardians via Telegram, allowing immediate response.
-
-Working Demo
 https://drive.google.com/file/d/1HhNCq11J1ZNmuDoxo6KYVFS1S7IJZid7/view
 
-About
+👤 **Author**
 
-Fall Detection using OpenCV, MediaPipe Pose Estimation, and Face Recognition
-Designed for healthcare emergency alerts and real-time monitoring.
+[Taheer Tai]
+
+📝 **License**
+
+This project is licensed under the MIT License.
+
+I hope this README provides a comprehensive overview of the Face Recognition System project.
